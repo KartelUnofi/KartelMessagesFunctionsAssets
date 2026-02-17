@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Discord Select Mock</title>
+
+<style>
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #2b2d31; /* фон Discord */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "gg sans", "Segoe UI", Arial, sans-serif;
+}
+
+/* контейнер */
+.wrapper {
+  background: #313338;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #1e1f22;
+}
+
+/* сам select */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background: #1e1f22;
+  color: #dbdee1;
+  border: 1px solid #1e1f22;
+  border-radius: 4px;
+
+  padding: 10px 36px 10px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  min-width: 220px;
+}
+
+/* стрелка как в Discord */
+.wrapper {
+  position: relative;
+}
+
+.wrapper::after {
+  content: "▾";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #b5bac1;
+  pointer-events: none;
+  font-size: 14px;
+}
+
+/* hover / focus — РЕЗКО */
+select:hover {
+  background: #232428;
+}
+
+select:focus {
+  outline: none;
+  border-color: #5865f2; /* Discord blurple */
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+  <select>
+    <option>text ${index}</option>
+    <option>index</option>
+  </select>
+</div>
+
+</body>
+</html>

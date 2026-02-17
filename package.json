@@ -1,0 +1,13 @@
+{
+  "name": "cartel-prank-bot",
+  "version": "1.0.0",
+  "description": "Harmless prank Discord bot with fictional cartel debt messages",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.14.1"
+  }
+}

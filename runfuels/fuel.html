@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Discord Embed Mock</title>
+
+<style>
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #2b2d31; /* фон как в Discord */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "gg sans", "Segoe UI", Arial, sans-serif;
+}
+
+/* сам embed */
+.embed {
+  display: flex;
+  max-width: 520px;
+  background: #313338;          /* фон embed */
+  border-radius: 4px;
+  border: 1px solid #1e1f22;
+}
+
+/* левая линия */
+.embed-accent {
+  width: 4px;
+  background: #000000;          /* чёрная по умолчанию */
+}
+
+/* контент */
+.embed-body {
+  padding: 12px 16px;
+}
+
+/* title */
+.embed-title {
+  color: #f2f3f5;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+/* description */
+.embed-desc {
+  color: #b5bac1;
+  font-size: 14px;
+  line-height: 1.375;
+}
+
+/* РЕЗКИЙ hover */
+.embed:hover {
+  border-color: #e03b3b;
+}
+.embed:hover .embed-accent {
+  background: #e03b3b;
+}
+</style>
+</head>
+
+<body>
+
+<div class="embed">
+  <div class="embed-accent"></div>
+  <div class="embed-body">
+    <div class="embed-title">text ${index}</div>
+    <div class="embed-desc">text ${index}</div>
+  </div>
+</div>
+
+</body>
+</html>
